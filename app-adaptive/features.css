@@ -53,13 +53,15 @@ width: 30%;
     height: 24px;
     position: relative;
     top: 3em;
+    border-radius: 100%;
     
 }
 #features ul:first-child li:nth-child(1)::before{
-    background: url(img/devices-24px.svg) no-repeat;
+    background: url(img/devices-24px.svg) round white;;
     left: 2em;
-    height: 3em;
-    width: 3em;
+    height: 2em;
+    width: 2em;
+    padding: 0.5em;
 }
 #features ul:first-child li:nth-child(2)::before{
     background-image: url(img/developer_board-24px.svg);
