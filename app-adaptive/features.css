@@ -4,7 +4,7 @@ body{
 .container{
 width: 1140px;
 margin: 0 auto;
-background-color: red;
+background-color: #F7F7F7;
 }
 /*Styluri spacifice comune*/
 .tr{
@@ -17,6 +17,19 @@ background-color: red;
     text-align: center;
 }
 /*Styluri spacifice sectiunii*/
+header{
+    text-align: center;
+}
+header h1{
+    font-weight: 700;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+header p{
+color: #777777;
+margin-bottom: 2.5em;
+}
+
 #features.table{
 display: table;
 }
@@ -30,18 +43,23 @@ width: 30%;
 .row div img{
     width: 80%;  
 }
+#features li{
+    height: 251px;
+}
 #features li::before{
     content: "";
-    color: green;
     display: inline-block;
     width: 24px;
     height: 24px;
     position: relative;
     top: 3em;
+    
 }
 #features ul:first-child li:nth-child(1)::before{
-    background-image: url(img/devices-24px.svg);
+    background: url(img/devices-24px.svg) no-repeat;
     left: 2em;
+    height: 3em;
+    width: 3em;
 }
 #features ul:first-child li:nth-child(2)::before{
     background-image: url(img/developer_board-24px.svg);
@@ -65,11 +83,16 @@ width: 30%;
 }
 #features .table .row>*{
 display: table-cell;
-background-color: #333333;
+background-color: #F7F7F7;
 vertical-align: top;
 }
 #features ul h2{
     margin-bottom: 2em;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+#features ul p{
+    color: #777777; 
+    font-size: 1.2em;  
 }
 /*Pe acasa de terminat animatii le si de facu adaptivitatea in toate trei dimensiuni*/
