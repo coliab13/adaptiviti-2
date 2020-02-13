@@ -1,0 +1,75 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+width: 1140px;
+margin: 0 auto;
+background-color: red;
+}
+/*Styluri spacifice comune*/
+.tr{
+    text-align: right;
+}
+.tl{
+    text-align: left;
+}
+.tc{
+    text-align: center;
+}
+/*Styluri spacifice sectiunii*/
+#features.table{
+display: table;
+}
+#features .table .row{
+display: table-row;
+width: 30%;
+}
+.row div{
+    width: 40%; 
+}
+.row div img{
+    width: 80%;  
+}
+#features li::before{
+    content: "";
+    color: green;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 3em;
+}
+#features ul:first-child li:nth-child(1)::before{
+    background-image: url(img/devices-24px.svg);
+    left: 2em;
+}
+#features ul:first-child li:nth-child(2)::before{
+    background-image: url(img/developer_board-24px.svg);
+    left: 2em;
+}
+#features ul:first-child li:nth-child(3)::before{
+    background-image: url(img/language-24px.svg);
+    left: 2em;
+}
+#features ul:last-child li:nth-child(1)::before{
+    background-image: url(img/touch_app-24px.svg);
+    right: 2em;
+}
+#features ul:last-child li:nth-child(2)::before{
+    background-image: url(img/touch_app-24px.svg);
+    right: 2em;
+}
+#features ul:last-child li:nth-child(3)::before{
+    background-image: url(img/chat-24px.svg);
+    right: 2em;
+}
+#features .table .row>*{
+display: table-cell;
+background-color: #333333;
+vertical-align: top;
+}
+#features ul h2{
+    margin-bottom: 2em;
+    font-size: 1.5em;
+}
+/*Pe acasa de terminat animatii le si de facu adaptivitatea in toate trei dimensiuni*/
