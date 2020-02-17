@@ -1,8 +1,10 @@
 body{
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
 .container{
 width: 1140px;
+max-width: 1140px;
 margin: 0 auto;
 background-color: #F7F7F7;
 }
@@ -26,25 +28,24 @@ header h1{
     margin-bottom: 0.5em;
 }
 header p{
-color: #777777;
-margin-bottom: 2.5em;
-}
+color: #777777;}
 
 #features.table{
 display: table;
 }
 #features .table .row{
 display: table-row;
-width: 30%;
 }
 .row div{
     width: 40%; 
+    padding-top: 3em;
 }
 .row div img{
-    width: 80%;  
+    width: 60%; 
+    
 }
 #features li{
-    height: 251px;
+    height: 200px;
 }
 #features li::before{
     content: "";
@@ -52,36 +53,80 @@ width: 30%;
     width: 24px;
     height: 24px;
     position: relative;
-    top: 3em;
+    top: 4em;
     border-radius: 100%;
     
 }
-#features ul:first-child li:nth-child(1)::before{
-    background: url(img/devices-24px.svg) round white;;
-    left: 2em;
-    height: 2em;
-    width: 2em;
-    padding: 0.5em;
+#features ul:first-child li:nth-child(1) p::before{
+    content: url(img/devices-24px.svg);
+    float: right; 
+    position: relative;
+    z-index: 2;
+    border-radius: 100%;
+    padding: 15px;
+    top: -2.5em;
+    right: -2.9em;
+    background-color: #fff;
 }
-#features ul:first-child li:nth-child(2)::before{
-    background-image: url(img/developer_board-24px.svg);
-    left: 2em;
+#features ul:first-child li:nth-child(2) p::before{
+    content: url(img/developer_board-24px.svg);
+    float: right; 
+    position: relative;
+    border-radius: 100%;
+    padding: 15px;
+    top: -2.5em;
+    right: -2.9em;
+    background-color: #fff;
 }
-#features ul:first-child li:nth-child(3)::before{
-    background-image: url(img/language-24px.svg);
-    left: 2em;
+#features ul:first-child li:nth-child(3) p::before{
+    content: url(img/language-24px.svg);
+    float: right; 
+    position: relative;
+    border-radius: 100%;
+    padding: 15px;
+    top: -2.5em;
+    right: -2.9em;
+    background-color: #fff;
 }
-#features ul:last-child li:nth-child(1)::before{
-    background-image: url(img/touch_app-24px.svg);
-    right: 2em;
+#features ul:first-child li:nth-child(1) p:hover::before,
+#features ul:first-child li:nth-child(2) p:hover::before,
+#features ul:first-child li:nth-child(3) p:hover::before{
+    background-color:blue;  
 }
-#features ul:last-child li:nth-child(2)::before{
-    background-image: url(img/touch_app-24px.svg);
-    right: 2em;
+#features ul:last-child li:nth-child(1) p::before{
+    content: url(img/touch_app-24px.svg);
+    float: left; 
+    position: relative;
+    border-radius: 100%;
+    padding: 15px;
+    top: -2.5em;
+    right: 2.9em;
+    background-color: #fff;
 }
-#features ul:last-child li:nth-child(3)::before{
-    background-image: url(img/chat-24px.svg);
-    right: 2em;
+#features ul:last-child li:nth-child(2) p::before{
+    content: url(img/touch_app-24px.svg);
+    float: left; 
+    position: relative;
+    border-radius: 100%;
+    padding: 15px;
+    top: -2.5em;
+    right: 2.9em;
+    background-color: #fff;}
+
+#features ul:last-child li:nth-child(3) p::before{
+    content: url(img/chat-24px.svg);
+    float: left; 
+    position: relative;
+    border-radius: 100%;
+    padding: 15px;
+    top: -2.5em;
+    right: 2.9em;
+    background-color: #fff;}
+
+#features ul:last-child li:nth-child(1) p:hover::before,
+#features ul:last-child li:nth-child(2) p:hover::before,
+#features ul:last-child li:nth-child(3) p:hover::before{
+    background-color:blue;  
 }
 #features .table .row>*{
 display: table-cell;
@@ -89,12 +134,64 @@ background-color: #F7F7F7;
 vertical-align: top;
 }
 #features ul h2{
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     font-size: 1.2em;
     font-weight: 700;
 }
-#features ul p{
+#features ul:first-child p{
     color: #777777; 
     font-size: 1.2em;  
+    border-top: 2px solid rgb(182, 178, 178);
+    border-left: 2px solid rgb(180, 179, 179);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
 }
-/*Pe acasa de terminat animatii le si de facu adaptivitatea in toate trei dimensiuni*/
+#features ul:last-child p{
+    color: #777777; 
+    font-size: 1.2em;  
+    border-top: 2px solid rgb(182, 178, 178);
+    border-right: 2px solid rgb(180, 179, 179);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    position: relative;
+    padding-right: 1em;
+}
+#features ul p:hover{
+    border-color: blue; 
+}
+@media all and (max-width: 1325px){
+    .row ul:first-child{
+        width: 25%; 
+    }
+    .media{
+        width: 991px; 
+        margin: 0 auto; 
+    }
+    .row div img{
+        width: 50%; 
+}
+.row ul:last-child{
+    width: 25%; 
+}
+@media all and (max-width: 991px){
+    .row ul:first-child{
+        width: 40%; 
+    }
+    .media{
+        width: 700px; 
+        margin: 0 auto;  
+    }
+    .row div img{
+        display: none; 
+}
+.row div{
+    position: absolute;
+}
+.row ul:last-child{
+    width: 40%; 
+}
+header{
+    display: none;
+}
+}
