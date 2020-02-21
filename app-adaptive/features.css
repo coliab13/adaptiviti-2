@@ -1,6 +1,7 @@
 body{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    background-color: #F7F7F7;
 }
 .container{
 width: 1140px;
@@ -28,7 +29,10 @@ header h1{
     margin-bottom: 0.5em;
 }
 header p{
-color: #777777;}
+color: #777777;
+margin-bottom: 1em;
+}
+
 
 #features.table{
 display: table;
@@ -38,7 +42,6 @@ display: table-row;
 }
 .row div{
     width: 40%; 
-    padding-top: 3em;
 }
 .row div img{
     width: 60%; 
@@ -47,47 +50,33 @@ display: table-row;
 #features li{
     height: 200px;
 }
-#features li::before{
-    content: "";
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    position: relative;
-    top: 4em;
-    border-radius: 100%;
-    
-}
 #features ul:first-child li:nth-child(1) p::before{
     content: url(img/devices-24px.svg);
-    float: right; 
-    position: relative;
-    z-index: 2;
+    position: absolute;
     border-radius: 100%;
     padding: 15px;
-    top: -2.5em;
-    right: -2.9em;
+    top:-30px ;
+    right: -55px;
     background-color: #fff;
 }
 #features ul:first-child li:nth-child(2) p::before{
     content: url(img/developer_board-24px.svg);
-    float: right; 
-    position: relative;
+    position: absolute;
     border-radius: 100%;
     padding: 15px;
-    top: -2.5em;
-    right: -2.9em;
+    top:-30px ;
+    right: -55px;
     background-color: #fff;
 }
 #features ul:first-child li:nth-child(3) p::before{
     content: url(img/language-24px.svg);
-    float: right; 
-    position: relative;
+    position: absolute;
     border-radius: 100%;
     padding: 15px;
-    top: -2.5em;
-    right: -2.9em;
-    background-color: #fff;
-}
+    top:-30px ;
+    right: -55px;
+    background-color: #fff;}
+
 #features ul:first-child li:nth-child(1) p:hover::before,
 #features ul:first-child li:nth-child(2) p:hover::before,
 #features ul:first-child li:nth-child(3) p:hover::before{
@@ -96,31 +85,31 @@ display: table-row;
 #features ul:last-child li:nth-child(1) p::before{
     content: url(img/touch_app-24px.svg);
     float: left; 
-    position: relative;
+    position: absolute;
     border-radius: 100%;
     padding: 15px;
-    top: -2.5em;
-    right: 2.9em;
-    background-color: #fff;
-}
+    top: -30px;
+    left: -55px;
+    background-color: #fff;}
+
 #features ul:last-child li:nth-child(2) p::before{
     content: url(img/touch_app-24px.svg);
     float: left; 
-    position: relative;
+    position: absolute;
     border-radius: 100%;
     padding: 15px;
-    top: -2.5em;
-    right: 2.9em;
+    top: -30px;
+    left: -55px;
     background-color: #fff;}
 
 #features ul:last-child li:nth-child(3) p::before{
     content: url(img/chat-24px.svg);
     float: left; 
-    position: relative;
+    position: absolute;
     border-radius: 100%;
     padding: 15px;
-    top: -2.5em;
-    right: 2.9em;
+    top: -30px;
+    left: -55px;
     background-color: #fff;}
 
 #features ul:last-child li:nth-child(1) p:hover::before,
@@ -135,63 +124,174 @@ vertical-align: top;
 }
 #features ul h2{
     margin-bottom: 1em;
-    font-size: 1.2em;
     font-weight: 700;
+    font-size: 1.2em;
 }
 #features ul:first-child p{
-    color: #777777; 
-    font-size: 1.2em;  
+    color: #777777;   
     border-top: 2px solid rgb(182, 178, 178);
     border-left: 2px solid rgb(180, 179, 179);
     padding-top: 1em;
     padding-bottom: 1em;
     padding-left: 1em;
+    font-size: 1.1em;
+    position: relative;
+}
+#features ul:first-child h2{
+    text-align: right;
 }
 #features ul:last-child p{
-    color: #777777; 
-    font-size: 1.2em;  
+    color: #777777;  
     border-top: 2px solid rgb(182, 178, 178);
     border-right: 2px solid rgb(180, 179, 179);
     padding-top: 1em;
     padding-bottom: 1em;
     position: relative;
     padding-right: 1em;
+    font-size: 1.1em;
+
 }
 #features ul p:hover{
     border-color: blue; 
 }
-@media all and (max-width: 1325px){
-    .row ul:first-child{
-        width: 25%; 
-    }
-    .media{
-        width: 991px; 
-        margin: 0 auto; 
-    }
-    .row div img{
-        width: 50%; 
+#features ul:first-child li:nth-child(1) p:hover::after,
+#features ul:first-child li:nth-child(2) p:hover::after,
+#features ul:first-child li:nth-child(3) p:hover::after{
+ content: "";
+ position: absolute;
+ width: 40%;
+ height: 2px;
+ background-color: blue;
+ left: 0vh;
+ bottom: 0vh; 
+ animation: bor 0.5s 1; 
 }
-.row ul:last-child{
-    width: 25%; 
+#features ul:last-child li:nth-child(1) p:hover::after,
+#features ul:last-child li:nth-child(2) p:hover::after,
+#features ul:last-child li:nth-child(3) p:hover::after{
+ content: "";
+ position: absolute;
+ width: 40%;
+ height: 2px;
+ background-color: blue;
+ right: 0vh;
+ bottom: 0vh; 
+ animation: bor 0.5s 1; 
 }
-@media all and (max-width: 991px){
-    .row ul:first-child{
+@media (max-width: 1200px){
+    .container{
+     width: 90%;
+    }
+    .row div {
+        width: 35%;
+        padding-top: 5vh;
+    }
+}
+@media (max-width: 1000px){
+    .mob img{
+           display: none;
+           width: 0;
+       }
+       .left,
+       .right{
         width: 40%; 
     }
-    .media{
-        width: 700px; 
-        margin: 0 auto;  
+    .mob{
+        position: absolute;
+        width: 0;
     }
-    .row div img{
-        display: none; 
+    .container{
+        width: 90%;
+       }
+       .row div{
+           width: 0;
+       }
 }
-.row div{
+@media (max-width: 710px){
+    :root{
+        font-size: 12px;
+    }
+    header p{
+        margin-bottom: 2.5em;
+        
+    }
+    #features ul h2{
+        float: left;
+        margin-bottom: 0;
+        position: relative;
+        top: -1em;
+    }
+    .left li:first-child{
     position: absolute;
+    display: block;
+    width: 80%;    
+   }
+   .left li:nth-child(2){
+    position: absolute;
+    display: block;
+    width: 80%;  
+    top: 165px;   
+   }
+   .left li:last-child{
+    position: absolute;
+    display: block;
+    width: 80%;  
+    top: 255px;   
+   }
+   .right li:first-child{
+    position: absolute;
+    display: block;
+    width: 80%;  
+    top: 345px;
+       
+   }
+   .right li:nth-child(2){
+    position: absolute;
+    display: block;
+    width: 80%;  
+    top: 435px;
+       
+   }
+   .right li:last-child{
+    position: absolute;
+    display: block;
+    width: 80%;  
+    top: 525px; 
+    text-align: left;  
+   }
+
+   #features ul:last-child li:nth-child(1) p::before,
+   #features ul:last-child li:nth-child(2) p::before,
+   #features ul:last-child li:nth-child(3) p::before{ 
+       left: 100%; 
+   }
+   #features ul:last-child li:nth-child(1) p,
+   #features ul:last-child li:nth-child(2) p,
+   #features ul:last-child li:nth-child(3) p{
+      border-right: none;
+      border-left: 2px solid rgb(180, 179, 179);
+    padding-top: 1em;
+    padding-left: 1em; 
+   }
+   #features ul:last-child li:nth-child(1) p:hover,
+   #features ul:last-child li:nth-child(2) p:hover,
+   #features ul:last-child li:nth-child(3) p:hover{
+       border-color:blue;   
+   }
+   #features ul:last-child li:nth-child(1) p:hover::after,
+   #features ul:last-child li:nth-child(2) p:hover::after,
+   #features ul:last-child li:nth-child(3) p:hover::after{
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    background-color: blue;
+    left: 0vh;
+    bottom: 0vh; 
+    animation: bor 0.5s 1; 
+   }
 }
-.row ul:last-child{
-    width: 40%; 
-}
-header{
-    display: none;
-}
+@keyframes bor{
+    0%{width: 0%;}
+    100%{ width: 40%;}
 }
